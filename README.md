@@ -101,19 +101,18 @@
 * ### 모델 평가 및 개선
     - multi modal:
         - Multi modal 사용:
-
-|Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
-|------------------------|---------------------------|----------|
-|      EfficientNet      |           MLP             |  0.7024  |
-|         ResNext        |           MLP             |  0.7994  |
-|         DenseNet       |           MLP             |  0.7320  |
-|         AlexNet        |           MLP             |  0.7442  |
-|         ResNet         |           MLP             |  0.7540  |
-|      EfficientNet      |          TabNet           |  0.7195  |
-|         ResNext        |          TabNet           |  0.7874  |
-|         DenseNet       |          TabNet           |  0.7301  |
-|         AlexNet        |          TabNet           |  0.7521  |
-|         ResNet         |          TabNet           |  0.7664  |             
+            |Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
+            |------------------------|---------------------------|----------|
+            |      EfficientNet      |           MLP             |  0.7024  |
+            |         ResNext        |           MLP             |  0.7994  |
+            |         DenseNet       |           MLP             |  0.7320  |
+            |         AlexNet        |           MLP             |  0.7442  |
+            |         ResNet         |           MLP             |  0.7540  |
+            |      EfficientNet      |          TabNet           |  0.7195  |
+            |         ResNext        |          TabNet           |  0.7874  |
+            |         DenseNet       |          TabNet           |  0.7301  |
+            |         AlexNet        |          TabNet           |  0.7521  |
+            |         ResNet         |          TabNet           |  0.7664  |             
          
          
 
