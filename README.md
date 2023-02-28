@@ -50,7 +50,7 @@
         
         - Tabular data 결측치 제거:
           - 수치형: 해당 열의 중앙값으로 결측치 보완
-          - 범주형: 해당 열의 최빈값으로 결측치 완보완
+          - 범주형: 해당 열의 최빈값으로 결측치 보완
           
     - Augumentation:
         - 사용 기법:
@@ -60,7 +60,7 @@
             - CLAHE
             - Equalization
         - 선정이유:
-            - 이미지 데이터내의 병변 부위를 손상시키지 않는 augumentation 기법을정선정
+            - 이미지 데이터내의 병변 부위를 손상시키지 않는 augumentation 기법을 선정
    
 
      
@@ -68,19 +68,19 @@
 * ### 모델 선정
     - 두가지 방식의 모델 사용
         - Multi modal 사용:
-            - Image data의 feature과 Tabular data의 feature를 concat시 후,             classification 실행
+            - Image data의 feature과 Tabular data의 feature를 concat킨킨 후, classification 실행
         - Tabulr model과 Image model를  각각 사용:
-            - Image data와 Tabular data를 각각 classification model에 input시킨 후 나온 결과값들을 ensemble
-  
+            - Image data와 Tabular data를 각각 classification model에 input시킨 후 나온 결과값들로 ensemble 실행
+            
     - 사용 모델:
         - multi modal:
-            - Image Feature Extractor
-                - EfficientNet
-                - ResNext
-                - DenseNet
-                - AlexNet
-                - ResNet
-            - Tabular Feature Extractor
+            - Image Feature Extractor(backbone을 통해 image data의 feature map을 추출)
+                -- EfficientNet
+                -- ResNext
+                -- DenseNet
+                -- AlexNet
+                -- ResNet
+            - Tabular Feature Extractor(sequential layer와 TabNet의 encoder를 통해 Tabular data의 feature map을 추출)
                 - MLP
                 - TabNet 
                 
@@ -114,7 +114,20 @@
             |         AlexNet        |          TabNet           |  0.7521  |
             |         ResNet         |          TabNet           |  0.7664  |             
          
-         
+        - single modal 사용:
+          - Image Classification Model:
+            |Image Classification Model | F1 SCore | 
+            |---------------------------|----------|
+            |        EfficientNet       |  0.6575  |
+            |          ResNext          |  0.6615  |
+            |          DenseNet         |  0.7067  |
+            
+          - Tabular Classification Model:
+            |Tabular Classification Model | F1 SCore | 
+            |-----------------------------|----------|
+            |          EfficientNet       |  0.7826  |
+            |            ResNext          |  0.8167  |
+            |            DenseNet         |  0.8406  |
 
 
 
