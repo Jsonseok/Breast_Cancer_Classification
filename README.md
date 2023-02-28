@@ -15,8 +15,7 @@
 * ### 개발 과정
 <img width="600" alt="스크린샷 2022-12-06 오후 2 49 54" src="https://user-images.githubusercontent.com/105691874/205828484-18e6fb12-1c06-4da2-90dc-08deccede781.png">
 
-  
-  
+ 
 ---
 ## 🔬 프로젝트 수행 절차 및 
 * ### 데이터 분석
@@ -82,7 +81,7 @@
                 - MLP
                 - TabNet 
                 
-        - single modal:
+        - single model:
             - Image Classification Model
                 - mmClassification
                     - Res2Net
@@ -95,8 +94,10 @@
             - Ensemble
                 - Hard Voting
         
-           
-* ### 모델 결과 및 가평가
+---
+## 🔬 프로젝트 수행 결과
+
+* ### 모델 결과 및 평가
     - multi modal:      
       |Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
       |------------------------|---------------------------|----------|
@@ -127,24 +128,23 @@
             | Light Gradient Boosting Machine |  0.8406  |
             
           - Ensemble:
-            |Image Classification Model| Tabular Feature Extractor | F1 SCore | 
-            |------------------------|---------------------------|----------|
-            |      EfficientNet      |           MLP             |  0.7024  |
-            |         ResNext        |           MLP             |  0.7994  |
-            |         DenseNet       |           MLP             |  0.7320  |
-            |         AlexNet        |           MLP             |  0.7442  |
-            |         ResNet         |           MLP             |  0.7540  |
-            |      EfficientNet      |          TabNet           |  0.7195  |
-            |         ResNext        |          TabNet           |  0.7874  |
-            |         DenseNet       |          TabNet           |  0.7301  |
-            |         AlexNet        |          TabNet           |  0.7521  |
-            |         ResNet         |          TabNet           |  0.7664  |      
+            | Image Classification Model | Tabular Classification Model | F1 SCore | 
+            |----------------------------|------------------------------|----------|
+    
 
-
-
-
----
-## 🔬 프로젝트 수행 결과
+* ### 성능 한계
+  - 용량이 큰 Image data:
+    - 고해상도 이미지를 단순 resize 시킴으로써 발생한 많은 pixel loss가 성능 개선을 방해하는 것으로 생각됨
+  - 제한된 컴퓨팅 자원:
+    - 자원 한계로 인해 제한된 epoch수와 이미지의 크기로 인해 성능 개선에서 어려움을 겪음
 
 * ### 추후 개선 방향
+  1. pixel loss를 최소화하기 위해 고해상도 이미지 그대를 모델의 input data로 활용
+    - Multiple Instance Learning(MIL) 사용:
+      - 고해상도 이미지를 resize시키지 않고 원본 그대로를 input data로 사용하는 학습 모델
+      ![화면 캡처 2023-02-28 205113](https://user-images.githubusercontent.com/112038669/221879765-890552d7-a33c-4cbf-977c-cb9e4bfe1e89.png)
+      - 고해상도 이미지를 patch라는 작은 사이즈 이미지로 자른 후, 그렇게 자른 이미지들을 bag라 불리는 묶음으로 묶어서 input data로 사용한다
+      - 장점: 고해상도 이미지를 원본 데이터를 보존한 상태에서 모델내에 입력할 수 있기 때문에 resize로 이미지의 사이즈를 줄이는 것보다 성능개선에 도움이 될것이라 판단
 
+      
+      
