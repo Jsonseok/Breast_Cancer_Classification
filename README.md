@@ -72,11 +72,11 @@
     - 사용 모델:
         - multi modal:
             - Image Feature Extractor(backbone을 통해 image data의 feature map을 추출)
-                -- EfficientNet
-                -- ResNext
-                -- DenseNet
-                -- AlexNet
-                -- ResNet
+                - EfficientNet
+                - ResNext
+                - DenseNet
+                - AlexNet
+                - ResNet
             - Tabular Feature Extractor(sequential layer와 TabNet의 encoder를 통해 Tabular data의 feature map을 추출)
                 - MLP
                 - TabNet 
