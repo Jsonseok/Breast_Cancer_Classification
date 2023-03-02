@@ -97,7 +97,7 @@
 ---
 ## 🔬 프로젝트 수행 결과
 
-* ### 모델 결과 및 평가
+* ### 모델 결과
     - multi modal:      
       |Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
       |------------------------|---------------------------|----------|
@@ -107,10 +107,10 @@
       |         AlexNet        |           MLP             |  0.7442  |
       |         ResNet         |           MLP             |  0.7540  |
       |      EfficientNet      |          TabNet           |  0.7195  |
-      |         ResNext        |          TabNet           |  0.7874  |
+      |         ResNext        |          TabNet           |  0.7074  |
       |         DenseNet       |          TabNet           |  0.7301  |
-      |         AlexNet        |          TabNet           |  0.7521  |
-      |         ResNet         |          TabNet           |  0.7664  |         
+      |         AlexNet        |          TabNet           |  0.7121  |
+      |         ResNet         |          TabNet           |  0.7164  |         
             
      - single modal:
           - Image Classification Model:
@@ -128,10 +128,21 @@
             | Light Gradient Boosting Machine |  0.8406  |
             
           - Ensemble:
-            | Image Classification Model | Tabular Classification Model | F1 SCore | 
-            |----------------------------|------------------------------|----------|
-    
-
+            | Image Classification Model |   Tabular Classification Model  | F1 SCore | 
+            |----------------------------|---------------------------------|----------|
+            |         Res2Net50          |   Gradient Boosting Classifier  |  0.6781  |
+            |        MobileNet_v2        |     Cat Boosting Classifier     |  0.6912  |
+            |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.7364  |
+            |         Res2Net50          |   Gradient Boosting Classifier  |  0.6944  |
+            |        MobileNet_v2        |     Cat Boosting Classifier     |  0.7112  |
+            |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.6399  | 
+            |         Res2Net50          |   Gradient Boosting Classifier  |  0.7113  |
+            |        MobileNet_v2        |     Cat Boosting Classifier     |  0.7372  |
+            |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.7444  |
+            
+     - 최종 결과:
+        |         ResNext        |           MLP             |  0.7994  |
+            
 * ### 성능 한계
   - 용량이 큰 Image data:
     - 고해상도 이미지를 단순 resize 시킴으로써 발생한 많은 pixel loss가 성능 개선을 방해하는 것으로 생각됨
@@ -139,12 +150,17 @@
     - 자원 한계로 인해 제한된 epoch수와 이미지의 크기로 인해 성능 개선에서 어려움을 겪음
 
 * ### 추후 개선 방향
-  1. pixel loss를 최소화하기 위해 고해상도 이미지 그대를 모델의 input data로 활용
+  1. 고해상도 이미지 그대로를 모델의 input data로 활용
     - Multiple Instance Learning(MIL) 사용:
       - 고해상도 이미지를 resize시키지 않고 원본 그대로를 input data로 사용하는 학습 모델
       ![화면 캡처 2023-02-28 205113](https://user-images.githubusercontent.com/112038669/221879765-890552d7-a33c-4cbf-977c-cb9e4bfe1e89.png)
       - 고해상도 이미지를 patch라는 작은 사이즈 이미지로 자른 후, 그렇게 자른 이미지들을 bag라 불리는 묶음으로 묶어서 input data로 사용한다
       - 장점: 고해상도 이미지를 원본 데이터를 보존한 상태에서 모델내에 입력할 수 있기 때문에 resize로 이미지의 사이즈를 줄이는 것보다 성능개선에 도움이 될것이라 판단
+  2. Tabular data에 기존 변수를 사용해 새로운 변수를 추가
+    - 새로운 변수를 추가해 Tabular data의 복잡도를 높임으로써 성능개선을 도모
+    ![화면 캡처 2023-03-02 161847](https://user-images.githubusercontent.com/112038669/222358258-45f3c622-9d36-4892-b87a-3875e02db70c.png)
+
+
 
       
       
