@@ -71,7 +71,7 @@
             
     - 사용 모델:
         - multi modal:
-            - Image Feature Extractor(backbone을 통해 image data의 featur를를 추출)
+            - Image Feature Extractor(backbone을 통해 image data의 feature를 추출)
                 - EfficientNet
                 - ResNext
                 - DenseNet
