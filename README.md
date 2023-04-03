@@ -86,6 +86,7 @@
         - Soft Voting
         
 ---
+
 ## 🔬 모델 결과
 
 * ### Multi Modal:      
