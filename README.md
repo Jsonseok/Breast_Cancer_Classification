@@ -26,6 +26,7 @@
 
 * ### Tabular Data 분석
     <img width="300" alt="스크린샷 2022-12-06 오후 3 02 30" src="https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png">
+    
     * 환자 정보 테이블 파일(csv)
     * 나이, 진단명, 암의 개수 등 학습에 필요한 23가지의 항목 존재
     * 많은 양의 결측치 발견
