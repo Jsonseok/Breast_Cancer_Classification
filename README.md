@@ -14,17 +14,17 @@
 
 ---
 ## 🔬 데이터 분석
-* ###  데이터: Train dataset 1000, Test dataset 250
+* ###  Tabular Data 분석
     <img width="300" alt="스크린샷 2022-12-06 오후 2 55 27" src="https://user-images.githubusercontent.com/105691874/205830106-a9d6eb9b-e5bd-4810-af7f-8f813c04dbb3.png">
     
 * ### Image Data 분석
     <img width="300" alt="스크린샷 2022-12-06 오후 3 00 22" src="https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png">
     
     
-    * 병리 슬라이드 이미지 파일 (png)
-    * 1500 ~ 7300px 크기의 고해상도 이미지
-    * 각 데이터마다 종횡비가 상이
-    * 노이즈 데이터 존재
+    - 병리 슬라이드 이미지 파일 (png)
+    - 1500 ~ 7300px 크기의 고해상도 이미지
+    - 각 데이터마다 종횡비가 상이
+    - 노이즈 데이터 존재
 
 * ### Tabular Data 분석
     <img width="300" alt="스크린샷 2022-12-06 오후 3 02 30" src="https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png">
