@@ -70,7 +70,7 @@
       - TabNet
 
 * ### Single Modal 사용:
-<p align="center"><img src="https://user-images.githubusercontent.com/112038669/229560261-347ac40a-69d0-4a4d-b4e4-f2c9fed2ff29.png" width="80%" height="80%"></p>
+    <p align="center"><img src="https://user-images.githubusercontent.com/112038669/229560261-347ac40a-69d0-4a4d-b4e4-f2c9fed2ff29.png" width="80%" height="80%"></p>
     
     - Image Classification Model(MMClassification)
         - Res2Net
