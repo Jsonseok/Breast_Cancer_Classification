@@ -80,10 +80,9 @@
         - Soft Voting
         
 ---
-## 🔬 프로젝트 수행 결과
+## 🔬 모델 결과
 
-* ### 모델 결과
-    - Multi Modal:      
+* ### Multi Modal:      
       |Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
       |------------------------|---------------------------|----------|
       |      EfficientNet      |           MLP             |  0.7024  |
@@ -97,39 +96,40 @@
       |         AlexNet        |          TabNet           |  0.7121  |
       |         ResNet         |          TabNet           |  0.7164  |         
             
-     - Single Modal:
-          - Image Classification Model:
-            | Image Classification Model | F1 SCore | 
-            |----------------------------|----------|
-            |           Res2Net50        |  0.6575  |
-            |         MobileNet_v2       |  0.6615  |
-            |        ResNeXt50_32x4d     |  0.7067  |
+* ### Single Modal:
+    - Image Classification Model:
+      | Image Classification Model | F1 SCore | 
+      |----------------------------|----------|
+      |           Res2Net50        |  0.6575  |
+      |         MobileNet_v2       |  0.6615  |
+      |        ResNeXt50_32x4d     |  0.7067  |
+
+    - Tabular Classification Model:
+      |  Tabular Classification Model   | F1 SCore | 
+      |---------------------------------|----------|
+      |  Gradient Boosting Classifier   |  0.7826  |
+      |     Cat Boosting Classifier     |  0.8167  |
+      | Light Gradient Boosting Machine |  0.8406  |
             
-          - Tabular Classification Model:
-            |  Tabular Classification Model   | F1 SCore | 
-            |---------------------------------|----------|
-            |  Gradient Boosting Classifier   |  0.7826  |
-            |     Cat Boosting Classifier     |  0.8167  |
-            | Light Gradient Boosting Machine |  0.8406  |
-            
-          - Ensemble:
-            | Image Classification Model |   Tabular Classification Model  | F1 SCore | 
-            |----------------------------|---------------------------------|----------|
-            |         Res2Net50          |   Gradient Boosting Classifier  |  0.6781  |
-            |        MobileNet_v2        |     Cat Boosting Classifier     |  0.6912  |
-            |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.7364  |
-            |         Res2Net50          |   Gradient Boosting Classifier  |  0.6944  |
-            |        MobileNet_v2        |     Cat Boosting Classifier     |  0.7112  |
-            |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.6399  | 
-            |         Res2Net50          |   Gradient Boosting Classifier  |  0.7113  |
-            |        MobileNet_v2        |     Cat Boosting Classifier     |  0.7372  |
-            |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.7444  |
+    - Ensemble:
+      | Image Classification Model |   Tabular Classification Model  | F1 SCore | 
+      |----------------------------|---------------------------------|----------|
+      |         Res2Net50          |   Gradient Boosting Classifier  |  0.6781  |
+      |        MobileNet_v2        |     Cat Boosting Classifier     |  0.6912  |
+      |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.7364  |
+      |         Res2Net50          |   Gradient Boosting Classifier  |  0.6944  |
+      |        MobileNet_v2        |     Cat Boosting Classifier     |  0.7112  |
+      |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.6399  | 
+      |         Res2Net50          |   Gradient Boosting Classifier  |  0.7113  |
+      |        MobileNet_v2        |     Cat Boosting Classifier     |  0.7372  |
+      |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.7444  |
             
 ---
 
 ## 🔬 성능 한계
   - 용량이 큰 Image data:
     - 고해상도 이미지를 단순 resize 시킴으로써 발생한 많은 pixel loss가 성능 개선을 방해하는 것으로 생각됨
+
   - 제한된 컴퓨팅 자원:
     - 자원 한계로 인해 제한된 epoch수와 이미지의 크기로 인해 성능 개선에서 어려움을 겪음
 
