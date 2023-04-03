@@ -11,11 +11,6 @@
 
 * ### 개발 환경
   - AWS, VSCode, Phycharm, Anaconda
-  
----
-## 🔬 프로젝트 설명
-* ### 개발 과정
-<img width="600" alt="스크린샷 2022-12-06 오후 2 49 54" src="https://user-images.githubusercontent.com/105691874/205828484-18e6fb12-1c06-4da2-90dc-08deccede781.png">
 
 ---
 ## 🔬 데이터 분석
@@ -24,7 +19,6 @@
     
 * ### Image Data 분석
     <img width="300" alt="스크린샷 2022-12-06 오후 3 00 22" src="https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png">
-        
     * 병리 슬라이드 이미지 파일 (png)
     * 1500 ~ 7300px 크기의 고해상도 이미지
     * 각 데이터마다 종횡비가 상이
@@ -32,7 +26,6 @@
 
 * ### Tabular Data 분석
     <img width="300" alt="스크린샷 2022-12-06 오후 3 02 30" src="https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png">
-
     * 환자 정보 테이블 파일(csv)
     * 나이, 진단명, 암의 개수 등 학습에 필요한 23가지의 항목 존재
     * 많은 양의 결측치 발견
@@ -51,46 +44,35 @@
           
     - Augumentation:
         - 사용 기법:
-            - Rotation
-            - Flip
-            - Zoom In
-            - CLAHE
-            - Equalization
+            | Rotation | Flip | Zoom In | CLAHE | Equalization |
         - 선정이유:
             - 이미지 데이터내의 병변 부위를 손상시키지 않는 augumentation 기법을 선정
 
 ---
-* ### 모델 선정
-    - 두가지 방식의 모델 사용
-        - Multi modal 사용:
-            - Image data의 feature과 Tabular data의 feature를 concat킨킨 후, classification 실행
-        - Tabulr model과 Image model를  각각 사용:
-            - Image data와 Tabular data를 각각 classification model에 input시킨 후 나온 결과값들로 ensemble 실행
+## 🔬 모델 선정
+* ### Multi Modal 사용
+    - Image Feature Extractor
+       | EfficientNet | ResNext | DenseNet | AlexNet | ResNet |
+
+    - Tabular Feature Extractor
+        | MLP | TabNet |
+
+* ### Single Modal 사용:
+    - Image Classification Model
+        - MMClassification
+            - Res2Net
+            - MobileNet_v2
+            - ResNeXt50_32x4d
+            |             MMClassification             |
+            |------------------------------------------|
+            | Res2Net | MobileNet_v2 | ResNeXt50_32x4d |
             
-    - 사용 모델:
-        - multi modal:
-            - Image Feature Extractor(backbone을 통해 image data의 feature를 추출)
-                - EfficientNet
-                - ResNext
-                - DenseNet
-                - AlexNet
-                - ResNet
-            - Tabular Feature Extractor(sequential layer와 TabNet의 encoder를 통해 Tabular data의 feature map을 추출)
-                - MLP
-                - TabNet 
-                
-        - single model:
-            - Image Classification Model
-                - mmClassification
-                    - Res2Net
-                    - MobileNet_v2
-                    - ResNeXt50_32x4d
-            - Tabular Classification model
-                - Gradient Boosting Classifier
-                - Cat Boosting Classifier
-                - Light Gradient Boosting Machine
-            - Ensemble
-                - Hard Voting
+    - Tabular Classification model
+        - Gradient Boosting Classifier
+        - Cat Boosting Classifier
+        - Light Gradient Boosting Machine
+    - Ensemble
+        - Hard Voting
         
 ---
 ## 🔬 프로젝트 수행 결과
@@ -140,14 +122,15 @@
             
      - 최종 결과:
         |         ResNext        |           MLP             |  0.7994  |
-            
-* ### 성능 한계
+---
+
+## 🔬 성능 한계
   - 용량이 큰 Image data:
     - 고해상도 이미지를 단순 resize 시킴으로써 발생한 많은 pixel loss가 성능 개선을 방해하는 것으로 생각됨
   - 제한된 컴퓨팅 자원:
     - 자원 한계로 인해 제한된 epoch수와 이미지의 크기로 인해 성능 개선에서 어려움을 겪음
 
-* ### 추후 개선 방향
+## 🔬 추후 개선 방향
   1. 고해상도 이미지 그대로를 모델의 input data로 활용
     - Multiple Instance Learning(MIL) 사용:
       - 고해상도 이미지를 resize시키지 않고 원본 그대로를 input data로 사용하는 학습 모델
