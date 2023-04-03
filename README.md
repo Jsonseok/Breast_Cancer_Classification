@@ -51,8 +51,7 @@
 ## 🔬 모델 선정
 * ### Multi Modal 사용
     - Image Feature Extractor
-       | EfficientNet | ResNext | DenseNet | AlexNet | ResNet |
-
+      | EfficientNet | ResNext | DenseNet | AlexNet | ResNet |
     - Tabular Feature Extractor
         | MLP | TabNet |
 
