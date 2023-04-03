@@ -143,7 +143,7 @@
 
   2. Tabular data에 기존 변수를 사용해 새로운 변수를 추가
     - 새로운 변수를 추가해 Tabular data의 복잡도를 높임으로써 성능개선을 도모
-    <img src="https://user-images.githubusercontent.com/112038669/222358258-45f3c622-9d36-4892-b87a-3875e02db70c.png" width="80%" height="80%"/></center>
+    <center><img src="https://user-images.githubusercontent.com/112038669/222358258-45f3c622-9d36-4892-b87a-3875e02db70c.png" width="80%" height="80%"/></center>
 
 
       
