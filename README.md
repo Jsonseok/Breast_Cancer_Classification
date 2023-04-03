@@ -43,6 +43,10 @@
           
     - Augumentation:
         - 사용 기법:
+          |Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
+          |------------------------|---------------------------|----------|
+          |      EfficientNet      |           MLP             |  0.7024  |
+          
             | Rotation | Flip | Zoom In | CLAHE | Equalization |
         - 선정이유:
             - 이미지 데이터내의 병변 부위를 손상시키지 않는 augumentation 기법을 선정
