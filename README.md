@@ -93,7 +93,7 @@
     |Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
     |------------------------|---------------------------|----------|
     |      EfficientNet      |           MLP             |  0.7024  |
-    | <span style="color:red">ResNext</spa> |           MLP             |  0.7994  |
+    | <span style="color:red">ResNext</span> |           MLP             |  0.7994  |
     |         DenseNet       |           MLP             |  0.7320  |
     |         AlexNet        |           MLP             |  0.7442  |
     |         ResNet         |           MLP             |  0.7540  |
