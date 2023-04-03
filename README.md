@@ -57,6 +57,7 @@
 ## 🔬 모델 선정
 * ### Multi Modal 사용
     <p align="center"><img src="https://user-images.githubusercontent.com/112038669/229552245-ebb3c016-ad5c-4fd0-9496-78bc46be5f1d.png" width="80%" height="80%"></p>
+    
     - Image Feature Extractor
       - EfficientNet
       - ResNext
