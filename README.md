@@ -43,11 +43,12 @@
           
     - Augumentation:
         - 사용 기법:
-          |Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
-          |------------------------|---------------------------|----------|
-          |      EfficientNet      |           MLP             |  0.7024  |
-          
-            | Rotation | Flip | Zoom In | CLAHE | Equalization |
+          - Rotation
+          - Flip
+          - Zoom In
+          - CLAHE
+          - Equalization
+
         - 선정이유:
             - 이미지 데이터내의 병변 부위를 손상시키지 않는 augumentation 기법을 선정
 
@@ -55,19 +56,21 @@
 ## 🔬 모델 선정
 * ### Multi Modal 사용
     - Image Feature Extractor
-      | EfficientNet | ResNext | DenseNet | AlexNet | ResNet |
+      - EfficientNet
+      - ResNext
+      - DenseNet
+      - AlexNet
+      - ResNet
+
     - Tabular Feature Extractor
-        | MLP | TabNet |
+      - Sequential Layer
+      - TabNet
 
 * ### Single Modal 사용:
-    - Image Classification Model
-        - MMClassification
-            - Res2Net
-            - MobileNet_v2
-            - ResNeXt50_32x4d
-            |             MMClassification             |
-            |------------------------------------------|
-            | Res2Net | MobileNet_v2 | ResNeXt50_32x4d |
+    - Image Classification Model(MMClassification)
+        - Res2Net
+        - MobileNet_v2
+        - ResNeXt50_32x4d
             
     - Tabular Classification model
         - Gradient Boosting Classifier
@@ -75,12 +78,13 @@
         - Light Gradient Boosting Machine
     - Ensemble
         - Hard Voting
+        - Soft Voting
         
 ---
 ## 🔬 프로젝트 수행 결과
 
 * ### 모델 결과
-    - multi modal:      
+    - Multi Modal:      
       |Image Feature Extractor | Tabular Feature Extractor | F1 SCore | 
       |------------------------|---------------------------|----------|
       |      EfficientNet      |           MLP             |  0.7024  |
@@ -94,7 +98,7 @@
       |         AlexNet        |          TabNet           |  0.7121  |
       |         ResNet         |          TabNet           |  0.7164  |         
             
-     - single modal:
+     - Single Modal:
           - Image Classification Model:
             | Image Classification Model | F1 SCore | 
             |----------------------------|----------|
@@ -122,8 +126,6 @@
             |        MobileNet_v2        |     Cat Boosting Classifier     |  0.7372  |
             |       ResNeXt50_32x4d      | Light Gradient Boosting Machine |  0.7444  |
             
-     - 최종 결과:
-        |         ResNext        |           MLP             |  0.7994  |
 ---
 
 ## 🔬 성능 한계
