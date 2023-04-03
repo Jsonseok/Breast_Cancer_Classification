@@ -19,6 +19,8 @@
     
 * ### Image Data 분석
     <img width="300" alt="스크린샷 2022-12-06 오후 3 00 22" src="https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png">
+    
+    
     * 병리 슬라이드 이미지 파일 (png)
     * 1500 ~ 7300px 크기의 고해상도 이미지
     * 각 데이터마다 종횡비가 상이
@@ -26,6 +28,7 @@
 
 * ### Tabular Data 분석
     <img width="300" alt="스크린샷 2022-12-06 오후 3 02 30" src="https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png">
+    
     
     * 환자 정보 테이블 파일(csv)
     * 나이, 진단명, 암의 개수 등 학습에 필요한 23가지의 항목 존재
