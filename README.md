@@ -15,7 +15,7 @@
 ## 🔬 데이터 분석
 * ### Image Data 분석
 
-    <p align="center"><https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png" width="300" height="300"></p>
+    <p align="center"><"https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png" width="300" height="300"></p>
   
     - 병리 슬라이드 이미지 파일 (png)
     - 1500 ~ 7300px 크기의 고해상도 이미지
@@ -24,7 +24,7 @@
 
 * ### Tabular Data 분석
  
-    <p align="center"><https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png" width="300" height="300"></p>
+    <p align="center"><"https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png" width="300" height="300"></p>
 
     - 환자 정보 테이블 파일(csv)
     - 나이, 진단명, 암의 개수 등 학습에 필요한 23가지의 항목 존재
