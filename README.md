@@ -14,7 +14,7 @@
 ---
 ## 🔬 데이터 분석
 * ### Image Data 분석
-<p align="center"><https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png" width="300" height="300"></p>
+    <p align="center"><https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png" width="300" height="300"></p>
 
     - 병리 슬라이드 이미지 파일 (png)
     - 1500 ~ 7300px 크기의 고해상도 이미지
