@@ -152,9 +152,9 @@
       - 장점: 고해상도 이미지를 원본 데이터를 보존한 상태에서 모델내에 입력할 수 있기 때문에 resize로 이미지의 사이즈를 줄이는 것보다 성능개선에 도움이 될것이라 판단
 
   2. Tabular data에 기존 변수를 사용해 새로운 변수를 추가
-    - 새로운 변수를 추가해 Tabular data의 복잡도를 높임으로써 성능개선을 도모
     <p align="center"><img src="https://user-images.githubusercontent.com/112038669/222358258-45f3c622-9d36-4892-b87a-3875e02db70c.png" width="80%" height="80%"></p>
 
+    - 새로운 변수를 추가해 Tabular data의 복잡도를 높임으로써 성능개선을 도모
 
       
       
