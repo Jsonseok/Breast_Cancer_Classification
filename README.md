@@ -145,13 +145,11 @@
 ---
 
 ## 🔬 추후 개선 방향
-  1. 고해상도 이미지 그대로를 모델의 input data로 활용
-    - Multiple Instance Learning(MIL) 사용:
-      - 고해상도 이미지를 resize시키지 않고 원본 그대로를 input data로 사용하는 학습 모델
+  1. Multiple Instance Learning(MIL) 사용:
      <p align="center"><img src="https://user-images.githubusercontent.com/112038669/221879765-890552d7-a33c-4cbf-977c-cb9e4bfe1e89.png" width="80%" height="80%"></p>
      
       - 고해상도 이미지를 patch라는 작은 사이즈 이미지로 자른 후, 그렇게 자른 이미지들을 bag라 불리는 묶음으로 묶어서 input data로 사용한다
-      - 장점: 고해상도 이미지를 원본 데이터를 보존한 상태에서 모델내에 입력할 수 있기 때문에 resize로 이미지의 사이즈를 줄이는 것보다 성능개선에 도움이 될것이라 판단
+      - 고해상도 이미지를 원본 데이터를 보존한 상태에서 모델내에 입력할 수 있기 때문에 resize로 이미지의 사이즈를 줄이는 것보다 성능개선에 도움이 될것이라 판단
 
   2. Tabular data에 기존 변수를 사용해 새로운 변수를 추가
       <p align="center"><img src="https://user-images.githubusercontent.com/112038669/222358258-45f3c622-9d36-4892-b87a-3875e02db70c.png" width="80%" height="80%"></p>
