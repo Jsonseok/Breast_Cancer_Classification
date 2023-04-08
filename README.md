@@ -40,8 +40,7 @@
         
 * ### Tabular Data 전처리:
     ![화면 캡처 2023-02-27 174206](https://user-images.githubusercontent.com/112038669/221515178-4dbe218d-bf59-435c-bbe0-ceb526765ae8.png)
-* ### 
-
+    
     - 결측치 제거:
       - 수치형: 해당 열의 중앙값으로 결측치 보완
       - 범주형: 해당 열의 최빈값으로 결측치 보완
